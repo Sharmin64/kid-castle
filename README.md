@@ -3,3 +3,5 @@
 ## tailwind css install
 
 ## daisy ui install
+
+## firebase installed

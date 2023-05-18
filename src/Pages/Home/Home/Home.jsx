@@ -1,9 +1,12 @@
 import React from "react";
+import Banner from "../Banner/Banner";
+import ToyCard from "../ToyCard/ToyCard";
 
 const Home = () => {
   return (
     <div>
-      <h1>this is sweet home albama</h1>
+      <Banner />
+      <ToyCard />
     </div>
   );
 };

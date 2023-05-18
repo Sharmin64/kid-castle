@@ -1,0 +1,80 @@
+[
+  {
+      "title": "Super Speed Racer",
+      "name": "Speed Racer",
+      "price": 19.99,
+      "rating": 4.2,
+      "description": "A fast and sleek toy car for racing enthusiasts.",
+      "available_quantity": 10,
+      "category": "Toys",
+      "sub-category": "Cars",
+      "user_img": "https://example.com/user_img_1.jpg",
+      "toy_name": "Speed Racer",
+      "seller": "Toy World"
+  },
+  {
+      "title": "Off-Road Adventure Monster",
+      "name": "Off-Road Adventure",
+      "price": 24.99,
+      "rating": 4.7,
+      "description": "A rugged toy car designed for off-road adventures.",
+      "available_quantity": 5,
+      "category": "Toys",
+      "sub-category": "Cars",
+      "user_img": "https://example.com/user_img_2.jpg",
+      "toy_name": "Off-Road Adventure",
+      "seller": "Fun Toys"
+  },
+  {
+      "title": "City Cruiser Mini",
+      "name": "City Cruiser",
+      "price": 14.99,
+      "rating": 3.9,
+      "description": "A toy car perfect for cruising through the city streets.",
+      "available_quantity": 8,
+      "category": "Toys",
+      "sub-category": "Cars",
+      "user_img": "https://example.com/user_img_3.jpg",
+      "toy_name": "City Cruiser",
+      "seller": "Kids Emporium"
+  },
+  {
+      "title": "Mega Monster Truck Madness",
+      "name": "Monster Truck Madness",
+      "price": 29.99,
+      "rating": 4.5,
+      "description": "An exciting monster truck toy with large wheels and high jumps.",
+      "available_quantity": 3,
+      "category": "Toys",
+      "sub-category": "Cars",
+      "user_img": "https://example.com/user_img_4.jpg",
+      "toy_name": "Monster Truck Madness",
+      "seller": "Adventure Toys"
+  },
+  {
+      "title": "Ultimate Sports Car Simulator",
+      "name": "Sports Car Simulator",
+      "price": 39.99,
+      "rating": 4.8,
+      "description": "A realistic sports car simulator toy with steering and sound effects.",
+      "available_quantity": 6,
+      "category": "Toys",
+      "sub-category": "Cars",
+      "user_img": "https://example.com/user_img_5.jpg",
+      "toy_name": "Sports Car Simulator",
+      "seller": "Playland Toys"
+  },
+  {
+      "title": "Police Pursuit Patrol Car",
+      "name": "Police Pursuit",
+      "price": 17.99,
+      "rating": 4.1,
+      "description": "A police car toy with flashing lights and sirens for exciting chases.",
+      "available_quantity": 12,
+      "category": "Toys",
+      "sub-category": "Cars",
+      "user_img": "https://example.com/user_img_6.jpg",
+      "toy_name": "Police Pursuit",
+      "seller": "Toy Palace"
+  }
+]

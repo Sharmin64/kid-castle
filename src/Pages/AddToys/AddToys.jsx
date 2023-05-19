@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+//import Swal from "sweetalert2/dist/sweetalert2.js";
+//import "sweetalert2/src/sweetalert2.scss";
 
 const AddToys = () => {
   const addToy = useLoaderData();
-  const { title, _id, price } = addToy;
+  const { title, _id, price, user_image, toy_image, photoURL } = addToy;
   const { user } = useContext(AuthContext);
 
   const handleAddToy = (event) => {
@@ -20,10 +22,34 @@ const AddToys = () => {
     const addToy = {
       seller: name,
       email,
+      //user_image,
+      photoURL,
       date,
       price,
     };
     console.log(addToy);
+
+    fetch("http://localhost:5005/dolls", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(addToy),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          //Swal.fire({
+          //  position: "top-end",
+          //  icon: "success",
+          //  title: "doll added successfully",
+          //  showConfirmButton: false,
+          //  timer: 1500,
+          //});
+          alert("toys added successfully");
+        }
+      });
   };
   return (
     <div className="mb-12">

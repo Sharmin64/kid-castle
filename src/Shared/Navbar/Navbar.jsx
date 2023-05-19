@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.log(error));
+  };
   const navitems = (
     <>
       <li>
@@ -10,12 +18,26 @@ const Navbar = () => {
       <li>
         <Link to="/blog">Blog</Link>
       </li>
-      <li>
-        <Link to="/login">LogIn</Link>
-      </li>
-      {/*<li>Add a Toy</li>
-      <li>All Toy</li>
-      <li>My Toys</li>*/}
+      {user?.email ? (
+        <div className="flex flex-row">
+          <li>
+            <button onClick={handleLogOut}>LogOut</button>
+          </li>
+          <li>
+            <Link to="/addToys">Add Toy</Link>
+          </li>
+          <li>
+            <Link>All Toys</Link>
+          </li>
+          <li>
+            <Link>My Toys</Link>
+          </li>
+        </div>
+      ) : (
+        <li>
+          <Link to="/login">LogIn</Link>
+        </li>
+      )}
     </>
   );
   return (
@@ -51,7 +73,18 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navitems}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Get started</a>
+        {user ? (
+          <>
+            <button onClick={handleLogOut} className="btn">
+              log out
+            </button>
+            <button className="rounded-full">
+              <img title={user?.displayName} src={user?.photoURL} alt="" />
+            </button>
+          </>
+        ) : (
+          <button className="btn">log in</button>
+        )}
       </div>
     </div>
   );

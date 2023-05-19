@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
   const [regError, setRegError] = useState("");
@@ -15,17 +16,18 @@ const Register = () => {
     const password = form.password.value;
     const photo = form?.photoUrl?.value;
     console.log(name, email, password, photo);
-    //if (!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password)) {
-    //  setRegError("password need strong character ");
-    //  return;
-    //}
+    if (!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/.test(password)) {
+      setRegError("password need strong character ");
+      return;
+    }
 
     createUser(email, password)
       .then((result) => {
         const createdUser = result.user;
+        updateProfile(user, { displayName: name, photoURL: photo });
         console.log("created user", createdUser);
         setRegError("");
-        event.target.reset();
+        form.reset();
       })
       .catch((error) => {
         console.log(error);

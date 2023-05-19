@@ -5,6 +5,8 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import { FcGoogle } from "react-icons/fc";
 import app from "../../firebase/firebase.config";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const auth = getAuth(app);
@@ -126,6 +128,7 @@ const Login = () => {
               </Link>
             </p>
           </div>
+          <ToastContainer />
         </div>
       </div>
     </div>

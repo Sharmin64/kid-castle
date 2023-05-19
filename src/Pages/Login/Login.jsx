@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import login from "../../assets/login.jpeg";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import { FcGoogle } from "react-icons/fc";
+import app from "../../firebase/firebase.config";
 
 const Login = () => {
+  const auth = getAuth(app);
+  const googleProvider = new GoogleAuthProvider();
+  const [user, setUser] = useState(null);
   const { signIn } = useContext(AuthContext);
 
   const handleLogin = (event) => {
@@ -13,10 +20,36 @@ const Login = () => {
     console.log(email, password);
     signIn(email, password)
       .then((result) => {
-        const user = result.user;
-        console.log(user);
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        //navigate(from, { replace: true });
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const handleGoogleSignIn = () => {
+    signInWithPopup(auth, googleProvider)
+      .then((result) => {
+        const loggedInUser = result.user;
+        console.log(loggedInUser);
+        setUser(loggedInUser);
+      })
+      .catch((error) => {
+        console.log("error", error.message);
+      });
+  };
+
+  const handleSignOut = () => {
+    signOut(auth)
+      .then((result) => {
+        console.log(result);
+        setUser(null);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
   return (
     <div>
@@ -27,14 +60,15 @@ const Login = () => {
             <img src={login} alt="login" />
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form onSubmit={handleLogin}>
-              <div className="card-body">
+            <div className="card-body">
+              <form onSubmit={handleLogin}>
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Email</span>
                   </label>
                   <input
-                    type="text"
+                    name="email"
+                    type="email"
                     placeholder="email"
                     className="input input-bordered"
                   />
@@ -44,19 +78,50 @@ const Login = () => {
                     <span className="label-text">Password</span>
                   </label>
                   <input
-                    type="text"
+                    name="password"
+                    type="password"
                     placeholder="password"
                     className="input input-bordered"
                   />
                 </div>
                 <div className="form-control mt-6">
-                  <button className="btn btn-primary">Login</button>
+                  <input
+                    className="btn btn-primary"
+                    type="submit"
+                    value="Login"
+                  />
                 </div>
-              </div>
-            </form>
+              </form>
+            </div>
+            <div className="mb-5">
+              <hr className="inline-flex w-1/3" />
+              <span>or</span>
+              <hr className="inline-flex w-1/3" />
+            </div>
+            <div>
+              {user ? (
+                <button
+                  onClick={handleSignOut}
+                  className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline focus:ring-primary-300 font-medium rounded-lg text-xl px-5 py-2.5 text-center light:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                >
+                  Sign Out
+                </button>
+              ) : (
+                <button
+                  onClick={handleGoogleSignIn}
+                  className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline focus:ring-primary-300 font-medium rounded-lg text-xl px-5 py-2.5 text-center light:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                >
+                  <FcGoogle
+                    className="inline-flex"
+                    style={{ fontSize: "3rem", alignItems: "center" }}
+                  />
+                  Signin with Google
+                </button>
+              )}
+            </div>
             <p className="my-4 text-center">
               New to Toy worlds
-              <Link className="text-orange-600 font-bold" to="/register">
+              <Link className="text-orange-600 font-bold mx-2" to="/register">
                 Register
               </Link>
             </p>

@@ -1,80 +1,107 @@
 [
-  {
-      "title": "Super Speed Racer",
-      "name": "Speed Racer",
+    {
+      "title": "Disney Princess Doll",
+      "name": "Cinderella",
       "price": 19.99,
-      "rating": 4.2,
-      "description": "A fast and sleek toy car for racing enthusiasts.",
+      "rating": 4.5,
+      "description": "Bring the magic of Cinderella to life with this beautiful Disney Princess doll.",
       "available_quantity": 10,
       "category": "Toys",
-      "sub-category": "Cars",
-      "user_img": "https://example.com/user_img_1.jpg",
-      "toy_name": "Speed Racer",
-      "seller": "Toy World"
-  },
-  {
-      "title": "Off-Road Adventure Monster",
-      "name": "Off-Road Adventure",
-      "price": 24.99,
-      "rating": 4.7,
-      "description": "A rugged toy car designed for off-road adventures.",
-      "available_quantity": 5,
+      "sub-category": "Dolls",
+      "user_image": "https://example.com/cinderella.jpg",
+      "toy_image": "https://i.pinimg.com/originals/f6/fd/92/f6fd921e4ce737aa4ecbb2aad152df45.jpg",
+      "seller": "Disney Store"
+    },
+    {
+      "title": "Mickey Mouse Clubhouse Figurine Set",
+      "name": "Meaky Mouse",
+      "price": 19.99,
+      "rating": 4.5,
+      "description": "Bring the magic of Cinderella to life with this beautiful Disney Princess doll.",
+      "available_quantity": 10,
       "category": "Toys",
-      "sub-category": "Cars",
-      "user_img": "https://example.com/user_img_2.jpg",
-      "toy_name": "Off-Road Adventure",
-      "seller": "Fun Toys"
-  },
-  {
-      "title": "City Cruiser Mini",
-      "name": "City Cruiser",
-      "price": 14.99,
-      "rating": 3.9,
-      "description": "A toy car perfect for cruising through the city streets.",
+      "sub-category": "Dolls",
+      "user_image": "https://example.com/cinderella.jpg",
+      "toy_image": "https://i.pinimg.com/236x/ef/5e/16/ef5e16db2fad7148c8a47bd338916da0.jpg",
+      "seller": "Disney Store"
+    },
+    {
+      "title": "Disney Princess Doll",
+      "name": "Snow White",
+      "price": 24.99,
+      "rating": 4.8,
+      "description": "Experience the enchantment of Snow White with this stunning Disney Princess doll.",
       "available_quantity": 8,
       "category": "Toys",
-      "sub-category": "Cars",
-      "user_img": "https://example.com/user_img_3.jpg",
-      "toy_name": "City Cruiser",
-      "seller": "Kids Emporium"
-  },
-  {
-      "title": "Mega Monster Truck Madness",
-      "name": "Monster Truck Madness",
+      "sub-category": "Dolls",
+      "user_image": "https://example.com/snow_white.jpg",
+      "toy_image": "https://i.pinimg.com/236x/27/0e/97/270e97b4b0aa1448b8666f6b2d33ba4c.jpg",
+      "seller": "Disney Store"
+    },
+    {
+      "title": "Mickey Mouse Clubhouse Figurine Set",
+      "name": "Snow White",
       "price": 29.99,
-      "rating": 4.5,
-      "description": "An exciting monster truck toy with large wheels and high jumps.",
-      "available_quantity": 3,
+      "rating": 4.7,
+      "description": "Join Mickey Mouse and his friends on exciting adventures with this fun figurine set.",
+      "available_quantity": 5,
       "category": "Toys",
-      "sub-category": "Cars",
-      "user_img": "https://example.com/user_img_4.jpg",
-      "toy_name": "Monster Truck Madness",
-      "seller": "Adventure Toys"
-  },
-  {
-      "title": "Ultimate Sports Car Simulator",
-      "name": "Sports Car Simulator",
-      "price": 39.99,
-      "rating": 4.8,
-      "description": "A realistic sports car simulator toy with steering and sound effects.",
-      "available_quantity": 6,
-      "category": "Toys",
-      "sub-category": "Cars",
-      "user_img": "https://example.com/user_img_5.jpg",
-      "toy_name": "Sports Car Simulator",
-      "seller": "Playland Toys"
-  },
-  {
-      "title": "Police Pursuit Patrol Car",
-      "name": "Police Pursuit",
-      "price": 17.99,
-      "rating": 4.1,
-      "description": "A police car toy with flashing lights and sirens for exciting chases.",
+      "sub-category": "Figurines",
+      "user_image": "https://example.com/mickey.jpg",
+      "toy_image": "https://pm1.narvii.com/6060/e6ceab2a8f1489813e22fea26e9c6380e7b5ef96_00.jpg",
+      "seller": "Disney Store"
+    },
+    {
+      "title": "Disney Princess Doll",
+      "name": "Belle",
+      "price": 22.99,
+      "rating": 4.6,
+      "description": "Step into the enchanting world of Beauty and the Beast with this stunning Belle doll.",
       "available_quantity": 12,
       "category": "Toys",
-      "sub-category": "Cars",
-      "user_img": "https://example.com/user_img_6.jpg",
-      "toy_name": "Police Pursuit",
-      "seller": "Toy Palace"
-  }
-]
+      "sub-category": "Dolls",
+      "user_image": "https://example.com/belle.jpg",
+      "toy_image": "https://static1.refinery29.com/bin/entry/e9f/x/1033887/merida-body.jpg",
+      "seller": "Disney Store"
+    },
+    {
+      "title": "Toy Story Buzz Lightyear Action Figure",
+      "name": "Buzz Lightyear",
+      "price": 39.99,
+      "rating": 4.9,
+      "description": "Embark on space adventures with the heroic Buzz Lightyear action figure from Toy Story.",
+      "available_quantity": 3,
+      "category": "Toys",
+      "sub-category": "Action Figures",
+      "user_image": "https://example.com/buzz_lightyear.jpg",
+      "toy_image": "https://images.hdqwalls.com/download/rapunzel-disney-princess-4k-47-480x854.jpg",
+      "seller": "Disney Store"
+    },
+    {
+      "title": "Disney Princess Doll",
+      "name": "Aurora",
+      "price": 27.99,
+      "rating": 4.4,
+      "description": "Experience the beauty of Sleeping Beauty with this captivating Aurora doll.",
+      "available_quantity": 6,
+      "category": "Toys",
+      "sub-category": "Dolls",
+      "user_image": "https://example.com/aurora.jpg",
+      "toy_image": "https://i.pinimg.com/736x/45/f4/81/45f4818686e5b10f64434b446a90b5fe--cinderella-disney-princess-disney.jpg",
+      "seller": "Disney Store"
+    },
+    {
+      "title": "Disney Princess Doll",
+      "name": "Elsa",
+      "price": 30.99,
+      "rating": 4.5,
+      "description": "Experience the beauty of Sleeping Beauty with this captivating Aurora doll.",
+      "available_quantity": 10,
+      "category": "Toys",
+      "sub-category": "Dolls",
+      "user_image": "https://example.com/aurora.jpg",
+      "toy_image": "https://i.pinimg.com/736x/8e/a5/8d/8ea58dd05e584212b85d895a9f4438c9.jpg",
+      "seller": "Disney Store"
+    }
+  ]
+  

@@ -13,15 +13,15 @@ import doll_4 from "../../../assets/images/doll_4.jpeg";
 const ToyGallery = () => {
   return (
     <Marquee>
-      <div className="w-screen gap-5 h-screen flex flex-row items-center overflow-hidden">
-        <img src={fairy_1} alt="" />
-        <img src={fairy4} alt="" />
-        <img src={fairy_2} alt="" />
-        <img src={fairy_3} alt="" />
-        <img src={fairy_5} alt="" />
-        <img src={fairy_6} alt="" />
-        <img src={fairy_7} alt="" />
-        <img src={doll_4} alt="" />
+      <div className="w-fit gap-4 my-6 flex flex-row items-center overflow-hidden rounded ">
+        <img className="w-full ring-offset-8" src={fairy_1} alt="" />
+        <img className="w-full ring-offset-8" src={fairy4} alt="" />
+        <img className="w-full ring-offset-8" src={fairy_2} alt="" />
+        <img className="w-full ring-offset-8" src={fairy_3} alt="" />
+        <img className="w-full ring-offset-8" src={fairy_5} alt="" />
+        <img className="w-full ring-offset-8" src={fairy_6} alt="" />
+        <img className="w-full ring-offset-8" src={fairy_7} alt="" />
+        <img className="w-full ring-offset-8" src={doll_4} alt="" />
       </div>
     </Marquee>
   );

@@ -7,3 +7,9 @@
 ## firebase installed
 
 ## react icons installed
+
+## toast installed
+
+## sweet alert 2 installed
+
+## react spinner installed

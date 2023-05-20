@@ -24,13 +24,13 @@ const Navbar = () => {
             <button onClick={handleLogOut}>LogOut</button>
           </li>
           <li>
-            <Link to="/addToys">Add Toy</Link>
+            <Link to="/addtoys">Add Toy</Link>
           </li>
           <li>
             <Link>All Toys</Link>
           </li>
           <li>
-            <Link>My Toys</Link>
+            <Link to="/dolls">My Toys</Link>
           </li>
         </div>
       ) : (
@@ -78,12 +78,19 @@ const Navbar = () => {
             <button onClick={handleLogOut} className="btn">
               log out
             </button>
-            <button className="rounded-full">
-              <img title={user?.displayName} src={user?.photoURL} alt="" />
+            <button>
+              <img
+                className=" rounded-full w-10"
+                title={user?.displayName}
+                src={user?.photoURL}
+                alt=""
+              />
             </button>
           </>
         ) : (
-          <button className="btn">log in</button>
+          <Link to="/login">
+            <button className="btn">log in</button>
+          </Link>
         )}
       </div>
     </div>

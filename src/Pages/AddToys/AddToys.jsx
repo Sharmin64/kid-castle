@@ -6,7 +6,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 
 const AddToys = () => {
   const addToy = useLoaderData();
-  const { title, _id, price, user_image, toy_image, photoURL } = addToy;
+  const { title, _id, price, user_image } = addToy;
   const { user } = useContext(AuthContext);
 
   const handleAddToy = (event) => {
@@ -22,8 +22,7 @@ const AddToys = () => {
     const addToy = {
       seller: name,
       email,
-      //user_image,
-      photoURL,
+      user_image,
       date,
       price,
     };

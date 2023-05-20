@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import DollRow from "./DollRow";
+import Swal from "sweetalert2";
 
 const Dolls = () => {
   const { user } = useContext(AuthContext);
@@ -11,24 +12,35 @@ const Dolls = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setAddDolls(data));
-  }, []);
+  }, [url]);
 
   const handleDelete = (id) => {
-    const proceed = confirm("Are you sure you wanna delete!");
-    if (proceed) {
-      fetch(`http://localhost:5005/dolls/${id}`, {
-        method: "DELETE",
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
-          if (data.deletedCount > 0) {
-            alert("deleted successful");
-            const remaining = addDolls.filter((addDoll) => addDoll._id !== id);
-            setAddDolls(remaining);
-          }
-        });
-    }
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isProceed) {
+        fetch(`http://localhost:5005/dolls/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.deletedCount > 0) {
+              Swal.fire("Deleted!", "Your Toy has been deleted.", "success");
+              const remaining = addDolls.filter(
+                (addDoll) => addDoll._id !== id
+              );
+              setAddDolls(remaining);
+            }
+          });
+      }
+    });
   };
 
   const handleUpdate = (id) => {

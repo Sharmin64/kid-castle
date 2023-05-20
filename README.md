@@ -13,3 +13,7 @@
 ## sweet alert 2 installed
 
 ## react spinner installed
+
+## npm install react-fast-marquee --save
+
+## npm install --save aos@next

@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
-//import Swal from "sweetalert2/dist/sweetalert2.js";
-//import "sweetalert2/src/sweetalert2.scss";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
+import Swal from "sweetalert2";
+//import { ToastContainer, toast } from "react-toastify";
+//import "react-toastify/dist/ReactToastify.css";
 
 const AddToys = () => {
-  const addToy = useLoaderData();
-  const { title, _id, price, user_image } = addToy;
+  //const addToy = useLoaderData();
+  //const { _id, price, user_image } = addToy;
   const { user } = useContext(AuthContext);
 
   const handleAddToy = (event) => {
@@ -41,20 +41,19 @@ const AddToys = () => {
       .then((data) => {
         console.log(data);
         if (data.insertedId) {
-          //Swal.fire({
-          //  position: "top-end",
-          //  icon: "success",
-          //  title: "doll added successfully",
-          //  showConfirmButton: false,
-          //  timer: 1500,
-          //});
-          toast("toys added successfully");
+          Swal.fire({
+            title: "Success!",
+            text: "Toy Added Successfully",
+            icon: "success",
+            confirmButtonText: "Cool",
+          });
+          //toast("toys added successfully");
         }
       });
   };
   return (
     <div className="mb-12">
-      <h3 className="text-center text-3xl">add here some toyes: {title} </h3>
+      <h3 className="text-center text-3xl">add here some toyes: </h3>
       <form onSubmit={handleAddToy}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div className="form-control">
@@ -99,7 +98,7 @@ const AddToys = () => {
             <input
               type="text"
               name="price"
-              defaultValue={"$" + price}
+              //defaultValue={"$" + price}
               className="input input-bordered"
             />
           </div>
@@ -122,7 +121,7 @@ const AddToys = () => {
           />
         </div>
       </form>
-      <ToastContainer />
+      {/*<ToastContainer />*/}
     </div>
   );
 };

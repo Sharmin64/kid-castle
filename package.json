@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
     "daisyui": "^2.51.6",
     "firebase": "^9.22.0",
     "flowbite": "^1.6.5",
@@ -17,6 +18,7 @@
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-fast-marquee": "^1.5.2",
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.11.2",
     "react-spinners": "^0.13.8",

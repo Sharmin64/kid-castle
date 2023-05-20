@@ -1,5 +1,6 @@
 import React from "react";
 import { FcCopyright } from "react-icons/fc";
+import logo from "../../assets/logo/logo.jpeg";
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
       <footer className="footer footer-center p-10 bg-primary text-primary-content">
         <div>
           <h2 className="text-4xl font-bold">Kid Castle</h2>
-          <span>logo</span>
+          <img className="w-12 rounded-full" src={logo} alt="" />
           <p className="font-bold">
             ACME Industries Ltd. <br />
             Providing reliable tech since 1992

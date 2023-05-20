@@ -7,7 +7,7 @@ const Dolls = () => {
   const { user } = useContext(AuthContext);
   const [addDolls, setAddDolls] = useState([]);
 
-  const url = `http://localhost:5005/dolls?email=${user?.email}`;
+  const url = `https://assignment-11-toy-server-tau.vercel.app/dolls?email=${user?.email}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -25,7 +25,7 @@ const Dolls = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isProceed) {
-        fetch(`http://localhost:5005/dolls/${id}`, {
+        fetch(`https://assignment-11-toy-server-tau.vercel.app/dolls/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -44,7 +44,7 @@ const Dolls = () => {
   };
 
   const handleUpdate = (id) => {
-    fetch(`http://localhost:5005/dolls/${id}`, {
+    fetch(`https://assignment-11-toy-server-tau.vercel.app/dolls/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

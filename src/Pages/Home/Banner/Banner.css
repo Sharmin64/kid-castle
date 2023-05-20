@@ -1,0 +1,9 @@
+.my-banner {
+  background-image: url('../../../assets/images/dol_banner.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: inherit;
+  max-width: 100vw;
+  border-radius: 20px;
+  position: relative;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import { FcCopyright } from "react-icons/fc";
+import { FcCallback, FcContacts, FcCopyright } from "react-icons/fc";
 import logo from "../../assets/logo/logo.jpeg";
 
 const Footer = () => {
@@ -19,6 +19,14 @@ const Footer = () => {
           </p>
         </div>
         <div>
+          <span>
+            Contacts Info
+            <FcContacts style={{ fontSize: "2rem" }} className="inline-flex" />
+          </span>
+          <p>
+            <FcCallback style={{ fontSize: "2rem" }} className="inline-flex" />
+            +008845 3455 2234 556
+          </p>
           <div className="grid grid-flow-col gap-4">
             <a>
               <svg

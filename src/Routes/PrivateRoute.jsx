@@ -7,7 +7,12 @@ const PrivateRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
   const location = useLocation();
   if (loading) {
-    return <RingLoader color="#36d7b7" />;
+    return (
+      <RingLoader
+        className="items-center justify-center top-96 mx-auto"
+        color="#36d7b7"
+      />
+    );
   }
 
   if (user?.email) {

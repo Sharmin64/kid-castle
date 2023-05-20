@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 
 const AddToys = () => {
   //const addToy = useLoaderData();
-  //const { _id, price, user_image } = addToy;
+  const { _id, price, toy_image } = addToy;
   const { user } = useContext(AuthContext);
 
   const handleAddToy = (event) => {
@@ -24,13 +24,13 @@ const AddToys = () => {
     const addToy = {
       seller: name,
       email,
-      user_image,
+      toy_image,
       date,
       price,
     };
     console.log(addToy);
 
-    fetch("http://localhost:5005/dolls", {
+    fetch("https://assignment-11-toy-server-tau.vercel.app/dolls", {
       method: "POST",
       headers: {
         "content-type": "application/json",

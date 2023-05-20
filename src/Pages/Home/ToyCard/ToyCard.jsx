@@ -25,7 +25,7 @@ const ToyCard = () => {
   const [toys, setToys] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5005/toys")
+    fetch("https://assignment-11-toy-server-tau.vercel.app/toys")
       .then((res) => res.json())
       .then((data) => setToys(data));
   }, []);

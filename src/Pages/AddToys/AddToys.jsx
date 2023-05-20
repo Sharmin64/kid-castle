@@ -3,6 +3,8 @@ import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 //import Swal from "sweetalert2/dist/sweetalert2.js";
 //import "sweetalert2/src/sweetalert2.scss";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const AddToys = () => {
   const addToy = useLoaderData();
@@ -46,7 +48,7 @@ const AddToys = () => {
           //  showConfirmButton: false,
           //  timer: 1500,
           //});
-          alert("toys added successfully");
+          toast("toys added successfully");
         }
       });
   };
@@ -120,6 +122,7 @@ const AddToys = () => {
           />
         </div>
       </form>
+      <ToastContainer />
     </div>
   );
 };

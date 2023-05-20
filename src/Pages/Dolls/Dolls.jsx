@@ -30,6 +30,28 @@ const Dolls = () => {
         });
     }
   };
+
+  const handleUpdate = (id) => {
+    fetch(`http://localhost:5005/dolls/${id}`, {
+      method: "PATCH",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ status: "update" }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount > 0) {
+          //?update
+          const remaining = addDolls.filter((addDoll) => addDoll._id !== id);
+          const updated = addDolls.find((addDoll) => addDoll._id === id);
+          updated.status = "update";
+          const newAddDolls = [updated, ...remaining];
+          setAddDolls(newAddDolls);
+        }
+      });
+  };
   return (
     <div>
       <div className="overflow-x-auto w-full">
@@ -55,6 +77,7 @@ const Dolls = () => {
                 key={addDoll._id}
                 addDoll={addDoll}
                 handleDelete={handleDelete}
+                handleUpdate={handleUpdate}
               ></DollRow>
             ))}
           </tbody>

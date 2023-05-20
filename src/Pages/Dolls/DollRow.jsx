@@ -1,7 +1,7 @@
 import React from "react";
 
-const DollRow = ({ addDoll, handleDelete }) => {
-  const { _id, seller, email, price, user_image } = addDoll;
+const DollRow = ({ addDoll, handleDelete, handleUpdate }) => {
+  const { _id, seller, email, price, user_image, status } = addDoll;
 
   return (
     <div>
@@ -40,7 +40,16 @@ const DollRow = ({ addDoll, handleDelete }) => {
         <td>{email}</td>
         <td>$ {price}</td>
         <th>
-          <button className="btn btn-ghost btn-xs">details</button>
+          {status === "update" ? (
+            <span>updated</span>
+          ) : (
+            <button
+              onClick={() => handleUpdate(_id)}
+              className="btn btn-ghost btn-xs"
+            >
+              Update
+            </button>
+          )}
         </th>
       </tr>
     </div>

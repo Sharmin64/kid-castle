@@ -12,6 +12,24 @@ const Dolls = () => {
       .then((res) => res.json())
       .then((data) => setAddDolls(data));
   }, []);
+
+  const handleDelete = (id) => {
+    const proceed = confirm("Are you sure you wanna delete!");
+    if (proceed) {
+      fetch(`http://localhost:5005/dolls/${id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if (data.deletedCount > 0) {
+            alert("deleted successful");
+            const remaining = addDolls.filter((addDoll) => addDoll._id !== id);
+            setAddDolls(remaining);
+          }
+        });
+    }
+  };
   return (
     <div>
       <div className="overflow-x-auto w-full">
@@ -24,15 +42,20 @@ const Dolls = () => {
                   <input type="checkbox" className="checkbox" />
                 </label>
               </th>
+              <th>image</th>
               <th>Name</th>
-              <th>Job</th>
               <th>Email</th>
               <th>Price</th>
+              <th>Status</th>
             </tr>
           </thead>
           <tbody>
             {addDolls.map((addDoll) => (
-              <DollRow key={addDoll._id} addDoll={addDoll}></DollRow>
+              <DollRow
+                key={addDoll._id}
+                addDoll={addDoll}
+                handleDelete={handleDelete}
+              ></DollRow>
             ))}
           </tbody>
         </table>

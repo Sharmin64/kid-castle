@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 //import "react-toastify/dist/ReactToastify.css";
 
 const AddToys = () => {
-  //const addToy = useLoaderData();
+  const addToy = useLoaderData();
   const { _id, price, toy_image } = addToy;
   const { user } = useContext(AuthContext);
 

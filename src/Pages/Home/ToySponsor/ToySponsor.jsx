@@ -11,7 +11,7 @@ const ToySponsor = () => {
     <div>
       <h3 className="text-6xl mb-4 mt-3 font-bold ">Our Sponsor</h3>
 
-      <div className=" gap-4 flex lg:flex-row flex-col items-center justify-around rounded">
+      <div className=" gap-4 flex lg:flex-row flex-col items-center justify-around rounded mb-5">
         <img className="w-32 rounded " src={spon1} alt="" />
         <img className="w-32 rounded " src={spon2} alt="" />
         <img className="w-32 rounded " src={spon3} alt="" />

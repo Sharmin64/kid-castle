@@ -14,14 +14,30 @@ const ToyGallery = () => {
   return (
     <Marquee>
       <div className="w-fit gap-4 my-6 flex flex-row items-center overflow-hidden rounded ">
-        <img className="w-full ring-offset-8" src={fairy_1} alt="" />
-        <img className="w-full ring-offset-8" src={fairy4} alt="" />
-        <img className="w-full ring-offset-8" src={fairy_2} alt="" />
-        <img className="w-full ring-offset-8" src={fairy_3} alt="" />
-        <img className="w-full ring-offset-8" src={fairy_5} alt="" />
-        <img className="w-full ring-offset-8" src={fairy_6} alt="" />
-        <img className="w-full ring-offset-8" src={fairy_7} alt="" />
-        <img className="w-full ring-offset-8" src={doll_4} alt="" />
+        <div className="card">
+          <img className="w-full ring-offset-8" src={fairy_1} alt="" />
+        </div>
+        <div className="card w-fit">
+          <img className="w-full ring-offset-8" src={fairy4} alt="" />
+        </div>
+        <div className="card w-fit">
+          <img className="w-full ring-offset-8" src={fairy_2} alt="" />
+        </div>
+        <div className="card w-fit">
+          <img className="w-full ring-offset-8" src={fairy_3} alt="" />
+        </div>
+        <div className="card w-fit">
+          <img className="w-full ring-offset-8" src={fairy_5} alt="" />
+        </div>
+        <div className="card w-fit">
+          <img className="w-full ring-offset-8" src={fairy_6} alt="" />
+        </div>
+        <div className="card w-fit">
+          <img className="w-full ring-offset-8" src={fairy_7} alt="" />
+        </div>
+        <div className="card w-fit">
+          <img className="w-full ring-offset-8" src={doll_4} alt="" />
+        </div>
       </div>
     </Marquee>
   );

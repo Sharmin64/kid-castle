@@ -30,7 +30,7 @@ const AddToys = () => {
     };
     console.log(addToy);
 
-    fetch("https://assignment-11-toy-server-tau.vercel.app/dolls", {
+    fetch("http://localhost:5005/toys/dolls", {
       method: "POST",
       headers: {
         "content-type": "application/json",

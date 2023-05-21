@@ -5,7 +5,7 @@ const Banner = () => {
   return (
     <div className="hero lg:h-auto min-h-screen min-w-screen">
       <div className="my-banner hero-overlay bg-opacity-60">
-        <div className="absolute top-72 bottom-0 items-center justify-center mx-auto">
+        <div className="absolute top-64 items-end justify-end mx-auto">
           <h2 className="text-4xl font-extrabold text-blue-800 text-center sm:h-auto">
             Disney Princess
           </h2>

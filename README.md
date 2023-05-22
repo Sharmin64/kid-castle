@@ -17,3 +17,5 @@
 ## npm install react-fast-marquee --save
 
 ## npm install --save aos@next
+
+## npm i @smastrom/react-rating

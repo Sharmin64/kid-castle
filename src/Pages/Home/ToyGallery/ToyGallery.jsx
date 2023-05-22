@@ -12,31 +12,31 @@ import doll_4 from "../../../assets/images/doll_4.jpeg";
 
 const ToyGallery = () => {
   return (
-    <Marquee>
+    <Marquee className="w-fit">
       <div className="w-fit gap-4 my-6 flex flex-row items-center overflow-hidden rounded ">
-        <div className="card">
-          <img className="w-full ring-offset-8" src={fairy_1} alt="" />
+        <div className="card bg-indigo-400 rounded w-fit">
+          <img className="w-fit " src={fairy_1} alt="" />
         </div>
-        <div className="card w-fit">
-          <img className="w-full ring-offset-8" src={fairy4} alt="" />
+        <div className="card w-fit bg-indigo-400 rounded">
+          <img className="w-cover rounded-3xl " src={fairy4} alt="" />
         </div>
-        <div className="card w-fit">
-          <img className="w-full ring-offset-8" src={fairy_2} alt="" />
+        <div className="card w-fit bg-indigo-400 rounded">
+          <img className="w-full rounded-3xl " src={fairy_2} alt="" />
         </div>
-        <div className="card w-fit">
-          <img className="w-full ring-offset-8" src={fairy_3} alt="" />
+        <div className="card w-fit bg-indigo-400 rounded">
+          <img className="w-full rounded-3xl " src={fairy_3} alt="" />
         </div>
-        <div className="card w-fit">
-          <img className="w-full ring-offset-8" src={fairy_5} alt="" />
+        <div className="card w-fit bg-indigo-400 rounded">
+          <img className="w-full rounded-3xl " src={fairy_5} alt="" />
         </div>
-        <div className="card w-fit">
-          <img className="w-full ring-offset-8" src={fairy_6} alt="" />
+        <div className="card w-fit bg-indigo-400 rounded">
+          <img className="w-fit  rounded-3xl" src={fairy_6} alt="" />
         </div>
-        <div className="card w-fit">
-          <img className="w-full ring-offset-8" src={fairy_7} alt="" />
+        <div className="card w-fit bg-indigo-400 rounded">
+          <img className="w-fit  rounded-3xl" src={fairy_7} alt="" />
         </div>
-        <div className="card w-fit">
-          <img className="w-full ring-offset-8" src={doll_4} alt="" />
+        <div className="card w-fit bg-indigo-400 rounded">
+          <img className="w-fit  rounded-3xl" src={doll_4} alt="" />
         </div>
       </div>
     </Marquee>

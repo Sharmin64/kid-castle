@@ -3,7 +3,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import DollRow from "./DollRow";
 import Swal from "sweetalert2";
 
-const Dolls = () => {
+const AllDolls = () => {
   const { user } = useContext(AuthContext);
   const [addDolls, setAddDolls] = useState([]);
 
@@ -64,6 +64,7 @@ const Dolls = () => {
         }
       });
   };
+
   return (
     <div>
       <div className="overflow-x-auto w-full">
@@ -99,4 +100,4 @@ const Dolls = () => {
   );
 };
 
-export default Dolls;
+export default AllDolls;

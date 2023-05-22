@@ -13,30 +13,30 @@ const MyToys = () => {
       .then((data) => setMyToys(data));
   }, [user]);
 
-  //const handleDelete = (id) => {
-  //  Swal.fire({
-  //    title: "Are you sure?",
-  //    text: "You won't be able to revert this!",
-  //    icon: "warning",
-  //    showCancelButton: true,
-  //    confirmButtonColor: "#3085d6",
-  //    cancelButtonColor: "#d33",
-  //    confirmButtonText: "Yes, delete it!",
-  //  }).then((result) => {
-  //    if (result.isConfirmed) {
-  //      fetch(https://dreamy-dolls-server.vercel.app/all-toys/${id}, {
-  //        method: "DELETE",
-  //      })
-  //        .then((res) => res.json())
-  //        .then((data) => {
-  //          console.log("delete....", data);
-  //          if (data.deletedCount > 0) {
-  //            Swal.fire("Deleted!", "Your file has been deleted.", "success");
-  //          }
-  //        });
-  //    }
-  //  });
-  //};
+  const handleDelete = (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5005/dolls/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log("delete....", data);
+            if (data.deletedCount > 0) {
+              Swal.fire("Deleted!", "Your file has been deleted.", "success");
+            }
+          });
+      }
+    });
+  };
 
   return (
     <div className="min-h-screen ">
@@ -51,7 +51,8 @@ const MyToys = () => {
           <thead>
             <tr>
               <th>#</th>
-              <th>Toy photo url</th>
+              {/*<th>Toy photo url</th>*/}
+              <th></th>
               <th>Toy name</th>
               <th>Sub Category</th>
               <th>Price</th>
@@ -67,7 +68,12 @@ const MyToys = () => {
             {myToys?.map((myToy, index) => (
               <tr key={myToy._id}>
                 <td>{index + 1}</td>
-                <td>{myToy.photo}</td>
+
+                <td>
+                  {" "}
+                  <img className="rounded w-12 h-12" src={myToy.photo} alt="" />
+                </td>
+
                 <td>{myToy.name}</td>
                 <td>{myToy.category}</td>
                 <td>{myToy.price}</td>

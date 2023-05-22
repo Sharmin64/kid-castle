@@ -1,49 +1,35 @@
-import React, { useEffect, useState } from "react";
-import Toy from "./Toy";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
+import { Link } from "react-router-dom";
+import { Rating } from "@smastrom/react-rating";
 
-const ToyCard = () => {
-  AOS.init({
-    disable: false,
-    startEvent: "DOMContentLoaded",
-    initClassName: "aos-init",
-    animatedClassName: "aos-animate",
-    useClassNames: false,
-    disableMutationObserver: false,
-    debounceDelay: 50,
-    throttleDelay: 99,
+import "@smastrom/react-rating/style.css";
 
-    offset: 120,
-    delay: 0,
-    duration: 400,
-    easing: "ease",
-    once: false,
-    mirror: false,
-    anchorPlacement: "top-bottom",
-  });
-  const [toys, setToys] = useState([]);
+const ToyCard = ({ doll }) => {
+  const { photo, name, price, rating, _id } = doll;
 
-  useEffect(() => {
-    fetch("http://localhost:5005/dolls")
-      .then((res) => res.json())
-      .then((data) => setToys(data));
-  }, []);
   return (
-    <div
-      data-aos="zoom-in"
-      data-aos-offset="200"
-      data-aos-delay="50"
-      data-aos-duration="1000"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      data-aos-once="false"
-      data-aos-anchor-placement="top-center"
-      className="grid grid-cols-1 lg:grid-cols-3 gap-4"
-    >
-      {toys.map((toy) => (
-        <Toy key={toy._id} toy={toy}></Toy>
-      ))}
+    <div className="md:card md:w-96 md:mx-4 sm:mx-5 hover:bg-purple-200   shadow-xl">
+      <figure className="md:border-8">
+        <img className="md:w-96" src={photo} alt="photo" />
+      </figure>
+      <div className="card-body">
+        <h2 className="card-title">{name}</h2>
+        <h2 className="card-title"> Price : $ {price}</h2>
+        <h2 className="card-title">
+          <Rating
+            style={{ maxWidth: 150 }}
+            value={Math.round(rating)}
+            readOnly
+          />
+          {rating}
+        </h2>
+
+        <div className="card-actions justify-end">
+          <Link to={`/singleToyDetail/${_id}`}>
+            <button className="btn btn-primary font-mono">View Details</button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

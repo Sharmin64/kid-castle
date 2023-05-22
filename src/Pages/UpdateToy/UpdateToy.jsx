@@ -1,10 +1,13 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { useLoaderData } from "react-router-dom";
 
-const AddToys = () => {
+const UpdateToy = () => {
   const { user } = useContext(AuthContext);
+  const toys = useLoaderData();
+  const { photo, name, price, rating, quantity, description, _id } = toys;
 
-  const handleAddToy = (event) => {
+  const handleUpdateToy = (event) => {
     event.preventDefault();
     const form = event.target;
     const photo = form.photo.value;
@@ -16,8 +19,8 @@ const AddToys = () => {
     const rating = form.rating.value;
     const quantity = form.quantity.value;
     const description = form.description.value;
-    form.reset();
-    const allToys = {
+
+    const updateToy = {
       photo,
       name,
       sellerEmail,
@@ -28,27 +31,25 @@ const AddToys = () => {
       quantity,
       description,
     };
-    console.log(allToys);
+    console.log(updateToy);
 
-    fetch("http://localhost:5005/dolls", {
-      method: "POST",
+    fetch(`http://localhost:5005/update-toy/${_id}`, {
+      method: "PATCH",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(allToys),
+      body: JSON.stringify(updateToy),
     })
       .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      });
+      .then((data) => console.log(data));
   };
 
   return (
     <div className="container mx-auto mb-10 ">
-      <form onSubmit={handleAddToy}>
+      <form onSubmit={handleUpdateToy}>
         <div className=" border shadow-md p-10 rounded-sm">
           <h1 className="text-4xl text-primary font-bold underline text-center">
-            Add A Toy
+            Update toy
           </h1>
           <div className="card-body md:grid sm:grid-cols-1 md:grid-cols-2  gap-4 ">
             <div className="form-control">
@@ -58,6 +59,7 @@ const AddToys = () => {
               <input
                 type="text"
                 name="photo"
+                defaultValue={photo}
                 className="input input-bordered"
               />
             </div>
@@ -65,7 +67,12 @@ const AddToys = () => {
               <label className="label">
                 <span className="label-text text-lg">Toy Name</span>
               </label>
-              <input type="text" name="name" className="input input-bordered" />
+              <input
+                type="text"
+                name="name"
+                defaultValue={name}
+                className="input input-bordered"
+              />
             </div>
             <div className="form-control">
               <label className="label">
@@ -104,6 +111,7 @@ const AddToys = () => {
               <input
                 type="text"
                 name="price"
+                defaultValue={price}
                 className="input input-bordered"
               />
             </div>
@@ -114,6 +122,7 @@ const AddToys = () => {
               <input
                 type="text"
                 name="rating"
+                defaultValue={rating}
                 className="input input-bordered"
               />
             </div>
@@ -125,6 +134,7 @@ const AddToys = () => {
               <input
                 type="text"
                 name="quantity"
+                defaultValue={quantity}
                 className="input input-bordered"
               />
             </div>
@@ -134,17 +144,22 @@ const AddToys = () => {
               </label>
               <textarea
                 name="description"
+                defaultValue={description}
                 className="textarea textarea-bordered textarea-lg w-full"
               ></textarea>
             </div>
           </div>
         </div>
         <div className="form-control mt-6">
-          <input type="submit" className="btn btn-primary" value="Add Toy" />
+          <input
+            type="submit"
+            className="btn btn-primary"
+            value="Update a Toy"
+          />
         </div>
       </form>
     </div>
   );
 };
 
-export default AddToys;
+export default UpdateToy;

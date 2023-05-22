@@ -10,10 +10,14 @@ const ShopByCategory = () => {
       .then((res) => res.json())
       .then((data) => setDolls(data));
   }, []);
-  //console.log(",............", dolls);
-  const babyDolls = dolls.filter((doll) => doll.category === "Baby Dolls");
-  const barbies = dolls.filter((doll) => doll.category === "Barbie");
-  const americans = dolls.filter((doll) => doll.category === "American Girl");
+
+  const disneyPrincess = dolls.filter(
+    (doll) => doll.category === "Disney Princess"
+  );
+  const frozenDolls = dolls.filter((doll) => doll.category === "Frozen Dolls");
+  const animations = dolls.filter(
+    (doll) => doll.category === "Animation Character"
+  );
 
   return (
     <div className="container  mx-auto my-12">
@@ -22,28 +26,28 @@ const ShopByCategory = () => {
       </h1>
       <Tabs className="text-center">
         <TabList className="text-center text-2xl mb-10 underline py-6">
-          <Tab>Baby Dolls</Tab>
-          <Tab>Barbie</Tab>
-          <Tab>American girl</Tab>
+          <Tab>Disney Dolls</Tab>
+          <Tab>Frozen Dolls</Tab>
+          <Tab>Animation Character</Tab>
         </TabList>
 
         <TabPanel>
           <div className="grid sm:grid-cols-1  md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {babyDolls.map((doll) => (
+            {disneyPrincess.map((doll) => (
               <ToyCard key={doll._id} doll={doll}></ToyCard>
             ))}
           </div>
         </TabPanel>
         <TabPanel>
           <div className="grid sm:grid-cols-1  md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {barbies.map((doll) => (
+            {frozenDolls.map((doll) => (
               <ToyCard key={doll._id} doll={doll}></ToyCard>
             ))}
           </div>
         </TabPanel>
         <TabPanel>
           <div className="grid sm:grid-cols-1  md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {americans.map((doll) => (
+            {animations.map((doll) => (
               <ToyCard key={doll._id} doll={doll}></ToyCard>
             ))}
           </div>

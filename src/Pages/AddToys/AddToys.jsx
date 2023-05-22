@@ -89,12 +89,14 @@ const AddToys = () => {
                 className="input input-bordered"
               />
             </div>
-            <div className="form-control">
+            <div className="form-control py-3">
               <select name="category">
                 <option>Select a Category</option>
-                <option value="Baby Dolls">Baby Dolls</option>
-                <option value="Barbie">Barbie</option>
-                <option value="American Girl">American Girl</option>
+                <option value="Disney Princess">Disney Princess</option>
+                <option value="Frozen Dolls">Frozen Dolls</option>
+                <option value="Animations Character">
+                  Animations Character
+                </option>
               </select>
             </div>
             <div className="form-control">

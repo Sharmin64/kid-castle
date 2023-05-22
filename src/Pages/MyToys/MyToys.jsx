@@ -52,7 +52,7 @@ const MyToys = () => {
             <tr>
               <th>#</th>
               {/*<th>Toy photo url</th>*/}
-              <th></th>
+              <th> Image</th>
               <th>Toy name</th>
               <th>Sub Category</th>
               <th>Price</th>

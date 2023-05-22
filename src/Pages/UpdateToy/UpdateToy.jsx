@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateToy = () => {
   const { user } = useContext(AuthContext);
@@ -41,7 +42,17 @@ const UpdateToy = () => {
       body: JSON.stringify(updateToy),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount > 0) {
+          Swal.fire({
+            title: "Success!",
+            text: "Doll Updated  Successfully",
+            icon: "success",
+            confirmButtonText: "Cool",
+          });
+        }
+      });
   };
 
   return (
@@ -96,12 +107,12 @@ const UpdateToy = () => {
                 className="input input-bordered"
               />
             </div>
-            <div className="form-control">
+            <div className="form-control bg-red-200">
               <select name="category">
                 <option>Select a Category</option>
-                <option value="Baby Dolls">Baby Dolls</option>
-                <option value="Barbie">Barbie</option>
-                <option value="American Girl">American Girl</option>
+                <option value="Disney Princess">Disney Princess</option>
+                <option value="Frozen Dolls">Frozen Dolls</option>
+                <option value="Animation Character">Animation Character</option>
               </select>
             </div>
             <div className="form-control">

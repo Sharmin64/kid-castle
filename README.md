@@ -1,5 +1,7 @@
 ## b7a11-toy-marketplace-client-side-Sharmin64
 
+## live site: https://assignment-11-toy-firebase.web.app
+
 ## tailwind css install
 
 ## daisy ui install

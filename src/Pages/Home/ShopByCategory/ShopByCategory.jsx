@@ -6,7 +6,7 @@ import ToyCard from "../ToyCard/ToyCard";
 const ShopByCategory = () => {
   const [dolls, setDolls] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5005/allDolls")
+    fetch("https://assignment-11-toy-server-tau.vercel.app/allDolls")
       .then((res) => res.json())
       .then((data) => setDolls(data));
   }, []);

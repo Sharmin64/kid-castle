@@ -8,7 +8,9 @@ const MyToys = () => {
   const [myToys, setMyToys] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5005/dolls?email=${user?.email}`)
+    fetch(
+      `https://assignment-11-toy-server-tau.vercel.app/dolls?email=${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => setMyToys(data));
   }, [user]);
@@ -24,7 +26,7 @@ const MyToys = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5005/dolls/${id}`, {
+        fetch(`https://assignment-11-toy-server-tau.vercel.app/dolls/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

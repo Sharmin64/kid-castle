@@ -30,7 +30,7 @@ const AddToys = () => {
     };
     console.log(allToys);
 
-    fetch("http://localhost:5005/dolls", {
+    fetch("https://assignment-11-toy-server-tau.vercel.app/dolls", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -47,7 +47,7 @@ const AddToys = () => {
     <div className="container mx-auto mb-10 ">
       <form onSubmit={handleAddToy}>
         <div className=" border shadow-md p-10 rounded-sm">
-          <h1 className="text-4xl text-primary font-bold underline text-center">
+          <h1 className="text-4xl text-primary font-mono font-bold underline text-center">
             Add A Toy
           </h1>
           <div className="card-body md:grid sm:grid-cols-1 md:grid-cols-2  gap-4 ">

@@ -12,6 +12,7 @@ import AllToys from "../Pages/AllToys/AllToys";
 import SingleToyDetail from "../Pages/SingleToyDetail/SingleToyDetail";
 import MyToys from "../Pages/MyToys/MyToys";
 import UpdateToy from "../Pages/UpdateToy/UpdateToy";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -37,7 +38,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/addtoys",
-        element: <AddToys />,
+        element: (
+          <PrivateRoute>
+            <AddToys />
+          </PrivateRoute>
+        ),
       },
 
       {
@@ -46,9 +51,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/singleToyDetail/:id",
-        element: <SingleToyDetail />,
+        element: (
+          <PrivateRoute>
+            <SingleToyDetail />
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5005/dolls/${params.id}`),
+          fetch(
+            `https://assignment-11-toy-server-tau.vercel.app/dolls/${params.id}`
+          ),
       },
       {
         path: "mytoys",
@@ -58,7 +69,9 @@ const router = createBrowserRouter([
         path: "/updateToy/:id",
         element: <UpdateToy />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5005/dolls/${params.id}`),
+          fetch(
+            `https://assignment-11-toy-server-tau.vercel.app/dolls/${params.id}`
+          ),
       },
     ],
   },

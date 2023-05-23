@@ -34,7 +34,7 @@ const UpdateToy = () => {
     };
     console.log(updateToy);
 
-    fetch(`http://localhost:5005/update-toy/${_id}`, {
+    fetch(`https://assignment-11-toy-server-tau.vercel.app/update-toy/${_id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

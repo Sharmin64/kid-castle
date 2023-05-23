@@ -20,11 +20,11 @@ const SingleToyDetail = () => {
   } = toyDetails;
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen ">
       <div className="card mt-10  ">
         <figure>
           <img
-            className="img-fluid border-8 md:w-96 border-purple-400"
+            className="img-fluid border-8 md:w-fit border-purple-400"
             src={photo}
             alt="Album"
           />

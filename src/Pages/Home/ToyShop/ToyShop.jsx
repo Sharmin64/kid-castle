@@ -12,12 +12,12 @@ const ToyShop = () => {
         <img className="w-full object-cover" src={fairyB} alt="Background" />
 
         {/* Overlay */}
-        <div className="absolute -bottom-16 left-36 rounded-full w-9/12 h-64 items-center justify-center  bg-pink-500 mx-auto origin-center translate-y-5">
+        <div className="absolute -bottom-16 left-36 sm:right-0 sm:left-0 bg-blend-overlay rounded-full  w-9/12 h-64 items-center justify-center  bg-pink-500 mx-auto origin-center translate-y-5">
           <h1 className="text-4xl font-extrabold text-gray-800 mt-6">
             Get 30% Off Buying Any Package
           </h1>
 
-          <p className="text-lg text-center text-black mt-6">
+          <p className="text-lg text-center text-black mt-6 md:overflow-hidden">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Necessitatibus, libero accusamus laborum <br /> deserunt ratione
             dolor officiis praesentium! Deserunt magni aperiam dolor <br />

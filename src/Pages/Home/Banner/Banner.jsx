@@ -1,41 +1,36 @@
 import React from "react";
 import "../Banner/Banner.css";
 import {Carousel} from "react-responsive-carousel";
+import banner from "../../../assets/banner/bannerDoll.jpg";
 
 const Banner = () => {
   return (
     <div className="hero lg:h-auto min-h-screen min-w-screen">
-      {/*<Carousel
+      <Carousel
         showArrows={true}
-        onChange={onChange}
-        onClickItem={onClickItem}
-        onClickThumb={onClickThumb}
+        //onChange={onChange}
+        //onClickItem={onClickItem}
+        //onClickThumb={onClickThumb}
       >
         <div>
-          <img src="assets/1.jpeg" />
-          <p className="legend">Legend 1</p>
+          <img className="w-[700px]" src={banner} />
         </div>
         <div>
-          <img src="assets/2.jpeg" />
-          <p className="legend">Legend 2</p>
+          <img className="w-[700px]" src={banner} />
         </div>
         <div>
-          <img src="assets/3.jpeg" />
-          <p className="legend">Legend 3</p>
+          <img className="w-[700px]" src={banner} />
         </div>
         <div>
-          <img src="assets/4.jpeg" />
-          <p className="legend">Legend 4</p>
+          <img className="w-[700px]" src={banner} />
         </div>
         <div>
-          <img src="assets/5.jpeg" />
-          <p className="legend">Legend 5</p>
+          <img className="w-[700px]" src={banner} />
         </div>
         <div>
-          <img src="assets/6.jpeg" />
-          <p className="legend">Legend 6</p>
+          <img className="w-[700px]" src={banner} />
         </div>
-      </Carousel>*/}
+      </Carousel>
     </div>
   );
 };

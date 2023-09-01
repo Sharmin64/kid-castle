@@ -1,8 +1,9 @@
-import { useContext } from "react";
-import { AuthContext } from "../../Providers/AuthProvider";
+import {useContext} from "react";
+import {AuthContext} from "../../Providers/AuthProvider";
+import SectionTitle from "../../hooks/SectionTitle";
 
 const AddToys = () => {
-  const { user } = useContext(AuthContext);
+  const {user} = useContext(AuthContext);
 
   const handleAddToy = (event) => {
     event.preventDefault();
@@ -47,9 +48,7 @@ const AddToys = () => {
     <div className="container mx-auto mb-10 ">
       <form onSubmit={handleAddToy}>
         <div className=" border shadow-md p-10 rounded-sm">
-          <h1 className="text-4xl text-primary font-mono font-bold underline text-center">
-            Add A Toy
-          </h1>
+          <SectionTitle heading={"Add Toy Here"}></SectionTitle>
           <div className="card-body md:grid sm:grid-cols-1 md:grid-cols-2  gap-4 ">
             <div className="form-control">
               <label className="label">

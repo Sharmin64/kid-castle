@@ -1,6 +1,6 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
-import { Rating } from "@smastrom/react-rating";
+import {useLoaderData} from "react-router-dom";
+import {Rating} from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
 
@@ -20,14 +20,10 @@ const SingleToyDetail = () => {
   } = toyDetails;
 
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen flex sm:flex-col">
       <div className="card mt-10  ">
         <figure>
-          <img
-            className="img-fluid border-8 md:w-fit border-purple-400"
-            src={photo}
-            alt="Album"
-          />
+          <img className="img-fluid md:w-fit " src={photo} alt="Album" />
         </figure>
         <div className="card-body text-center ">
           <h2 className="text-3xl font-bold">Name : {name}</h2>
@@ -45,7 +41,7 @@ const SingleToyDetail = () => {
             Seller Email : {sellerEmail}
             <h2 className="flex justify-center items-center gap-4">
               <Rating
-                style={{ maxWidth: 250 }}
+                style={{maxWidth: 250}}
                 value={Math.round(rating)}
                 readOnly
               />

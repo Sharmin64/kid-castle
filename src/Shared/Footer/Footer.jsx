@@ -1,11 +1,11 @@
 import React from "react";
-import { FcCallback, FcContacts, FcCopyright } from "react-icons/fc";
+import {FcCallback, FcContacts, FcCopyright} from "react-icons/fc";
 import logo from "../../assets/logo/logo.jpeg";
 
 const Footer = () => {
   return (
     <div>
-      <footer className="footer footer-center p-10 bg-primary text-primary-content">
+      <footer className="footer footer-center p-10 bg-pink-300 w-full text-primary-content ">
         <div>
           <h2 className="text-4xl font-bold">Kid Castle</h2>
           <img className="w-12 rounded-full" src={logo} alt="" />
@@ -21,10 +21,10 @@ const Footer = () => {
         <div>
           <span>
             Contacts Info
-            <FcContacts style={{ fontSize: "2rem" }} className="inline-flex" />
+            <FcContacts style={{fontSize: "2rem"}} className="inline-flex" />
           </span>
           <p>
-            <FcCallback style={{ fontSize: "2rem" }} className="inline-flex" />
+            <FcCallback style={{fontSize: "2rem"}} className="inline-flex" />
             +008845 3455 2234 556
           </p>
           <div className="grid grid-flow-col gap-4">

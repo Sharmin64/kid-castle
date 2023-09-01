@@ -1,12 +1,13 @@
-import React, { useContext } from "react";
-import { AuthContext } from "../../Providers/AuthProvider";
-import { useLoaderData } from "react-router-dom";
+import React, {useContext} from "react";
+import {AuthContext} from "../../Providers/AuthProvider";
+import {useLoaderData} from "react-router-dom";
 import Swal from "sweetalert2";
+import SectionTitle from "../../hooks/SectionTitle";
 
 const UpdateToy = () => {
-  const { user } = useContext(AuthContext);
+  const {user} = useContext(AuthContext);
   const toys = useLoaderData();
-  const { photo, name, price, rating, quantity, description, _id } = toys;
+  const {photo, name, price, rating, quantity, description, _id} = toys;
 
   const handleUpdateToy = (event) => {
     event.preventDefault();
@@ -59,9 +60,7 @@ const UpdateToy = () => {
     <div className="container mx-auto mb-10 ">
       <form onSubmit={handleUpdateToy}>
         <div className=" border shadow-md p-10 rounded-sm">
-          <h1 className="text-4xl text-primary font-bold underline text-center">
-            Update toy
-          </h1>
+          <SectionTitle heading={"Update Toy"}></SectionTitle>
           <div className="card-body md:grid sm:grid-cols-1 md:grid-cols-2  gap-4 ">
             <div className="form-control">
               <label className="label">

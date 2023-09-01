@@ -1,25 +1,41 @@
 import React from "react";
 import "../Banner/Banner.css";
+import {Carousel} from "react-responsive-carousel";
 
 const Banner = () => {
   return (
     <div className="hero lg:h-auto min-h-screen min-w-screen">
-      <div className="my-banner hero-overlay bg-opacity-60">
-        <div className="absolute top-64 items-end justify-end mx-auto">
-          <h2 className="text-4xl font-extrabold text-blue-800 text-center sm:h-auto">
-            Disney Princess
-          </h2>
-          <p className="text-blue-700 text-center mx-auto flex-shrink-0">
-            Our disney princess is dolor sit amet consectetur adipisicing elit.
-            Repellat eos quidem voluptas molestias, expedita quis reiciendis
-            optio error consequatur eligendi voluptatem, quam fugiat voluptates
-            facere vel explicabo eius? Pariatur, laborum?
-          </p>
-          <button className="bg-indigo-400 border-spacing-4 text-zinc-900 px-8 py-4 rounded ">
-            Explore More
-          </button>
+      {/*<Carousel
+        showArrows={true}
+        onChange={onChange}
+        onClickItem={onClickItem}
+        onClickThumb={onClickThumb}
+      >
+        <div>
+          <img src="assets/1.jpeg" />
+          <p className="legend">Legend 1</p>
         </div>
-      </div>
+        <div>
+          <img src="assets/2.jpeg" />
+          <p className="legend">Legend 2</p>
+        </div>
+        <div>
+          <img src="assets/3.jpeg" />
+          <p className="legend">Legend 3</p>
+        </div>
+        <div>
+          <img src="assets/4.jpeg" />
+          <p className="legend">Legend 4</p>
+        </div>
+        <div>
+          <img src="assets/5.jpeg" />
+          <p className="legend">Legend 5</p>
+        </div>
+        <div>
+          <img src="assets/6.jpeg" />
+          <p className="legend">Legend 6</p>
+        </div>
+      </Carousel>*/}
     </div>
   );
 };

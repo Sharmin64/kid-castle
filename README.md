@@ -2,6 +2,10 @@
 
 ## live site: https://assignment-11-toy-firebase.web.app
 
+## client side code: https://github.com/Sharmin64/kid-castle
+
+## server side code: https://github.com/Sharmin64/kid-castle-server
+
 ## tailwind css install
 
 ## daisy ui install

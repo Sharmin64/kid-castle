@@ -160,7 +160,7 @@ const UpdateToy = () => {
             </div>
           </div>
         </div>
-        <div className="form-control mt-6">
+        <div className="form-control">
           <input
             type="submit"
             className="btn btn-primary"

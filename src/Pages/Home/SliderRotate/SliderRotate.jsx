@@ -1,5 +1,6 @@
 import React from "react";
 import "./SliderRotate.css";
+import AOS from "aos";
 import "aos/dist/aos.css";
 import img7 from "../../../assets/extra/img7.jpeg";
 import img6 from "../../../assets/extra/img6.jpeg";
@@ -10,6 +11,7 @@ import extra9 from "../../../assets/extra/extra9.jpeg";
 import extra3 from "../../../assets/extra/extra3.jpeg";
 
 const SliderRotate = () => {
+  AOS.init();
   return (
     <>
       <div
@@ -23,17 +25,7 @@ const SliderRotate = () => {
         data-aos-anchor-placement="top-center"
         className=" grid lg:grid-cols-3 grid-cols-1 gap-4 justify-center items-center"
       >
-        <div
-          data-aos="fade-right"
-          data-aos-offset="200"
-          data-aos-delay="50"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="false"
-          data-aos-anchor-placement="top-center"
-          className="card w-fit glass"
-        >
+        <div className="card w-fit glass">
           <img className="rounded w-cover" src={img7} alt="doll" />
         </div>
         <div className="card w-fit glass">

@@ -9,11 +9,13 @@ import img2 from "../../../assets/extra/img2.jpeg";
 import extra8 from "../../../assets/extra/extra8.jpeg";
 import extra9 from "../../../assets/extra/extra9.jpeg";
 import extra3 from "../../../assets/extra/extra3.jpeg";
+import SectionTitle from "../../../hooks/SectionTitle";
 
 const SliderRotate = () => {
   AOS.init();
   return (
     <>
+      <SectionTitle heading={"Our Dolls Collection"}></SectionTitle>
       <div
         data-aos="fade-right"
         data-aos-offset="200"
@@ -23,28 +25,84 @@ const SliderRotate = () => {
         data-aos-mirror="true"
         data-aos-once="false"
         data-aos-anchor-placement="top-center"
-        className=" grid lg:grid-cols-3 grid-cols-1 gap-4 justify-center items-center"
+        className=" grid lg:grid-cols-3 grid-cols-1 md:w-full gap-4 justify-center items-center"
       >
-        <div className="card w-fit glass">
-          <img className="rounded w-cover" src={img7} alt="doll" />
+        <div className="card md:w-full bg-base-100 shadow-xl">
+          <figure>
+            <img className="rounded-full" src={img7} alt="Shoes" />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">Berbie Princess</h2>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
         </div>
-        <div className="card w-fit glass">
-          <img className="rounded w-cover" src={extra3} alt="doll" />
+        <div className="card md:w-full bg-base-100 shadow-xl">
+          <figure>
+            <img className="rounded-full" src={img6} alt="Shoes" />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">Berbie Princess</h2>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
         </div>
-        <div className="card w-fit glass">
-          <img className="rounded w-cover" src={img5} alt="doll" />
+        <div className="card md:w-full bg-base-100 shadow-xl">
+          <figure>
+            <img className="rounded-full" src={img5} alt="Shoes" />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">Berbie Princess</h2>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
         </div>
-        <div className="card w-fit glass">
-          <img className="rounded w-cover" src={img2} alt="doll" />
+        <div className="card md:w-full bg-base-100 shadow-xl">
+          <figure>
+            <img className="rounded-full" src={img2} alt="Shoes" />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">Berbie Princess</h2>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
         </div>
-        <div className="card w-fit glass">
-          <img className="rounded w-cover" src={extra8} alt="doll" />
+        <div className="card md:w-full bg-base-100 shadow-xl">
+          <figure>
+            <img className="rounded-full" src={extra9} alt="Shoes" />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">Berbie Princess</h2>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
         </div>
-        <div className="card w-fit glass">
-          <img className="rounded w-cover" src={extra9} alt="doll" />
+        <div className="card md:w-full bg-base-100 shadow-xl">
+          <figure>
+            <img className="rounded-full" src={extra3} alt="Shoes" />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">Berbie Princess</h2>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
         </div>
-        <div className="card w-fit glass">
-          <img className="rounded w-cover" src={img6} alt="doll" />
+        <div className="card md:w-full bg-base-100 shadow-xl">
+          <figure>
+            <img className="rounded-full" src={extra8} alt="Shoes" />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">Berbie Princess</h2>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
         </div>
       </div>
     </>

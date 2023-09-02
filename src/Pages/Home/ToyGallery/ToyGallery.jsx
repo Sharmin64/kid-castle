@@ -14,7 +14,7 @@ import SectionTitle from "../../../hooks/SectionTitle";
 const ToyGallery = () => {
   return (
     <>
-      <SectionTitle heading={"Toy Gallery"}></SectionTitle>
+      <SectionTitle heading={"Berbie Exibition"}></SectionTitle>
       <Marquee className="w-fit">
         <div className="w-fit gap-4 my-6 flex flex-row items-center overflow-hidden rounded ">
           <div className="card bg-indigo-400 rounded w-fit">

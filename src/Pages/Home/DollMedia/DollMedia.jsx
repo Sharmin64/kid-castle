@@ -8,31 +8,62 @@ const DollMedia = () => {
       src: "https://i.ibb.co/bRPTPK3/images-3.jpg",
       width: 520,
       height: 320,
-      caption: "After Rain",
+      caption: "Berbie Princess",
+    },
+    {
+      src: "https://i.ibb.co/FnSZw7p/berbeHat.jpg",
+      width: 520,
+      height: 250,
+      caption: "Princess with hat",
     },
     {
       src: "https://i.ibb.co/qypmqV0/download-2.jpg",
       width: 320,
       height: 212,
-      alt: "Boats (Jeshu John - designerspics.com)",
+      caption: "Cute Princess",
+    },
+    {
+      src: "https://i.ibb.co/xHHjLt9/berbeP.jpg",
+      width: 320,
+      height: 150,
+      caption: "Snow Princess",
     },
     {
       src: "https://i.ibb.co/BrKx59f/images-2.jpg",
-      width: 320,
-      height: 212,
-      alt: "Boats (Jeshu John - designerspics.com)",
+      width: 420,
+      height: 176,
+      caption: "Couple",
+    },
+    {
+      src: "https://i.ibb.co/8mHT91t/berStyle.jpg",
+      width: 420,
+      height: 190,
+      caption: "Stylish Princess",
+    },
+    {
+      src: "https://i.ibb.co/Fxbm06w/berbie-Black.jpg",
+      width: 420,
+      height: 200,
+      caption: "Black Princess",
     },
 
     {
       src: "https://i.ibb.co/Mfgz82Q/download-3.jpg",
       width: 320,
       height: 212,
+      caption: "Pinky Princess",
+    },
+    {
+      src: "https://i.ibb.co/3fjT2jC/bervie-White.jpg",
+      width: 320,
+      height: 112,
+      caption: "White Princess",
     },
   ];
   return (
     <div>
       <SectionTitle heading={"Berbie Gallery"}></SectionTitle>
-      <div className="w-full mx-0">
+      <div className="md:w-full mx-auto grid">
         <Gallery images={images}></Gallery>
       </div>
     </div>

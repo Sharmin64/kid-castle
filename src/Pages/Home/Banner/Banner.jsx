@@ -5,6 +5,7 @@ import banner from "../../../assets/banner/bannerDoll.jpg";
 import bannerA from "../../../assets/banner/bannerD.jpg";
 import ban from "../../../assets/banner/bannerE.jpg";
 import banR from "../../../assets/banner/bannerO.jpg";
+import baner from "../../../assets/banner/banerP.jpg";
 
 const Banner = () => {
   return (
@@ -23,7 +24,7 @@ const Banner = () => {
           <img className="w-[700px]" src={banR} />
         </div>
         <div>
-          <img className="w-[700px]" src={banner} />
+          <img className="w-[700px]" src={baner} />
         </div>
       </Carousel>
     </div>

@@ -12,7 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
-      <div className="min-h-screen min-w-screen mt-0">
+      <div className="min-h-screen min-w-screen">
         <RouterProvider router={router} />
       </div>
     </AuthProvider>

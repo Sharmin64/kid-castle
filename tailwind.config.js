@@ -3,14 +3,12 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {},
-    theme: {
-      screens: {
-        tablet: "640px",
+    screens: {
+      tablet: "640px",
 
-        laptop: "1024px",
+      laptop: "1024px",
 
-        desktop: "1280px",
-      },
+      desktop: "1280px",
     },
   },
   plugins: [require("daisyui")],

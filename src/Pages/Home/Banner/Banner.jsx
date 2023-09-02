@@ -6,15 +6,10 @@ import bannerA from "../../../assets/banner/bannerD.jpg";
 import ban from "../../../assets/banner/bannerE.jpg";
 import banR from "../../../assets/banner/bannerO.jpg";
 
-const Banner = ({onChange}) => {
+const Banner = () => {
   return (
     <div className="hero lg:h-auto min-h-screen min-w-screen mt-0">
-      <Carousel
-        showArrows={true}
-        onChange={onChange}
-        //onClickItem={onClickItem}
-        //onClickThumb={onClickThumb}
-      >
+      <Carousel showArrows={true}>
         <div>
           <img className="w-[700px]" src={banner} />
         </div>

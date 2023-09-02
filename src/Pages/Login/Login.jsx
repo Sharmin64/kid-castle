@@ -1,11 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, {useContext, useState} from "react";
 import login from "../../assets/login.jpeg";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../Providers/AuthProvider";
-import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
-import { FcGoogle } from "react-icons/fc";
+import {Link, useLocation, useNavigate} from "react-router-dom";
+import {AuthContext} from "../../Providers/AuthProvider";
+import {GoogleAuthProvider, getAuth, signInWithPopup} from "firebase/auth";
+import {FcGoogle} from "react-icons/fc";
 import app from "../../firebase/firebase.config";
-import { ToastContainer, toast } from "react-toastify";
+import {ToastContainer, toast} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
@@ -16,7 +16,7 @@ const Login = () => {
   const from = location?.state?.from?.pathname || "/";
 
   const [user, setUser] = useState(null);
-  const { signIn } = useContext(AuthContext);
+  const {signIn} = useContext(AuthContext);
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -29,7 +29,7 @@ const Login = () => {
         const loggedUser = result.user;
         console.log(loggedUser);
         toast("Signed in Successfully");
-        navigate(from, { replace: true });
+        navigate(from, {replace: true});
       })
       .catch((error) => {
         console.log(error);
@@ -41,8 +41,7 @@ const Login = () => {
       .then((result) => {
         const loggedInUser = result.user;
         toast("sign in with google successfully");
-        navigate(from, { replace: true });
-        console.log(loggedInUser);
+        navigate(from, {replace: true});
         setUser(loggedInUser);
       })
       .catch((error) => {
@@ -63,10 +62,10 @@ const Login = () => {
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col lg:flex-row">
+        <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Login now!</h1>
-            <img src={login} alt="login" />
+            <img className="w-[600px]" src={login} alt="login" />
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <div className="card-body">
@@ -122,7 +121,7 @@ const Login = () => {
                 >
                   <FcGoogle
                     className="inline-flex"
-                    style={{ fontSize: "3rem", alignItems: "center" }}
+                    style={{fontSize: "3rem", alignItems: "center"}}
                   />
                   Signin with Google
                 </button>

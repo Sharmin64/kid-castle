@@ -1,10 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../../Providers/AuthProvider";
+import React, {useContext, useEffect, useState} from "react";
+import {AuthContext} from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
+import SectionTitle from "../../hooks/SectionTitle";
 
 const MyToys = () => {
-  const { user } = useContext(AuthContext);
+  const {user} = useContext(AuthContext);
   const [myToys, setMyToys] = useState([]);
 
   useEffect(() => {
@@ -42,11 +43,7 @@ const MyToys = () => {
 
   return (
     <div className="min-h-screen ">
-      <div>
-        <h1 className="text-center text-5xl py-6 mb-5   bg-purple-100 text-purple-500 font-bold ">
-          My Toys
-        </h1>
-      </div>
+      <SectionTitle heading={"My Toys"}></SectionTitle>
       <div className="overflow-x-auto container mx-auto  w-full ">
         <table className="table  w-full">
           {/* head */}

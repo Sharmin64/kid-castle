@@ -1,17 +1,17 @@
 import React from "react";
-import "../Banner/Banner.css";
+//import "../Banner/Banner.css";
 import {Carousel} from "react-responsive-carousel";
 import banner from "../../../assets/banner/bannerDoll.jpg";
 import bannerA from "../../../assets/banner/bannerD.jpg";
 import ban from "../../../assets/banner/bannerE.jpg";
 import banR from "../../../assets/banner/bannerO.jpg";
 
-const Banner = () => {
+const Banner = ({onChange}) => {
   return (
     <div className="hero lg:h-auto min-h-screen min-w-screen mt-0">
       <Carousel
         showArrows={true}
-        //onChange={onChange}
+        onChange={onChange}
         //onClickItem={onClickItem}
         //onClickThumb={onClickThumb}
       >

@@ -1,12 +1,13 @@
-import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
-import { AuthContext } from "../../Providers/AuthProvider";
-import { updateProfile } from "firebase/auth";
+import React, {useContext, useState} from "react";
+import {Link} from "react-router-dom";
+import {AuthContext} from "../../Providers/AuthProvider";
+import {updateProfile} from "firebase/auth";
+import register from "../../assets/form/register.png";
 
 const Register = () => {
   const [regError, setRegError] = useState("");
 
-  const { createUser } = useContext(AuthContext);
+  const {createUser} = useContext(AuthContext);
   const [accepted, setAccepted] = useState(false);
   const handleRegister = (event) => {
     event.preventDefault();
@@ -24,7 +25,7 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         const createdUser = result.user;
-        updateProfile(user, { displayName: name, photoURL: photo });
+        updateProfile(user, {displayName: name, photoURL: photo});
         console.log("created user", createdUser);
         setRegError("");
         form.reset();
@@ -44,7 +45,7 @@ const Register = () => {
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Register!</h1>
-            <img src="" alt="login" />
+            <img className="w-[600px]" src={register} alt="login" />
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <div className="card-body">

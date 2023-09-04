@@ -1,5 +1,5 @@
 import React, {useContext, useState} from "react";
-import login from "../../assets/login.jpeg";
+import login from "../../assets/form/login.jpeg";
 import {Link, useLocation, useNavigate} from "react-router-dom";
 import {AuthContext} from "../../Providers/AuthProvider";
 import {GoogleAuthProvider, getAuth, signInWithPopup} from "firebase/auth";

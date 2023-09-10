@@ -1,7 +1,7 @@
 import React from "react";
 import "./SliderRotate.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
+//import AOS from "aos";
+//import "aos/dist/aos.css";
 import img7 from "../../../assets/extra/img7.jpeg";
 import img6 from "../../../assets/extra/img6.jpeg";
 import img5 from "../../../assets/extra/img5.jpeg";
@@ -12,22 +12,34 @@ import extra3 from "../../../assets/extra/extra3.jpeg";
 import SectionTitle from "../../../hooks/SectionTitle";
 
 const SliderRotate = () => {
-  AOS.init();
+  //AOS.init();
   return (
     <>
       <SectionTitle heading={"Our Dolls Collection"}></SectionTitle>
       <div
-        data-aos="fade-right"
-        data-aos-offset="200"
-        data-aos-delay="50"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
-        data-aos-mirror="true"
-        data-aos-once="false"
-        data-aos-anchor-placement="top-center"
+        //data-aos="zoom-in"
+        //data-aos-offset="200"
+        //data-aos-delay="50"
+        //data-aos-duration="1000"
+        //data-aos-easing="ease-in-out"
+        //data-aos-mirror="true"
+        //data-aos-once="false"
+        //data-aos-anchor-placement="top-center"
         className=" grid lg:grid-cols-3 grid-cols-1 md:w-full gap-4 justify-center items-center mb-10"
       >
-        <div className="card md:w-full bg-base-100 shadow-xl">
+        <div className="card">
+          <div className="imgbox">
+            <img src={img7} alt="" />
+          </div>
+          <div className="content">
+            <h3 className="text-pink-800">Berbie doll</h3>
+            <button className="btn px-8 py-4 bg-fuchsia-700 text-base hover:bg-fuchsia-300 hover:text-black opacity-0">
+              Buy Now
+            </button>
+          </div>
+        </div>
+
+        {/*<div className="card md:w-full bg-base-100 shadow-xl">
           <figure>
             <img className="rounded-full" src={img7} alt="Shoes" />
           </figure>
@@ -103,7 +115,7 @@ const SliderRotate = () => {
               <button className="btn btn-primary">Buy Now</button>
             </div>
           </div>
-        </div>
+        </div>*/}
       </div>
     </>
   );

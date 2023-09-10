@@ -1,8 +1,8 @@
-import { createBrowserRouter } from "react-router-dom";
+import {createBrowserRouter} from "react-router-dom";
 import Main from "../Layout/Main/Main";
 import Home from "../Pages/Home/Home/Home";
 import Blog from "../Pages/Blog/Blog";
-import ErrorPage from "../Pages/Error/ErrorPage";
+//import ErrorPage from "../Pages/Error/ErrorPage";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import AddToys from "../Pages/AddToys/AddToys";
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
-    errorElement: <ErrorPage />,
+    //errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -56,7 +56,7 @@ const router = createBrowserRouter([
             <SingleToyDetail />
           </PrivateRoute>
         ),
-        loader: ({ params }) =>
+        loader: ({params}) =>
           fetch(
             `https://assignment-11-toy-server-tau.vercel.app/dolls/${params.id}`
           ),
@@ -68,7 +68,7 @@ const router = createBrowserRouter([
       {
         path: "/updateToy/:id",
         element: <UpdateToy />,
-        loader: ({ params }) =>
+        loader: ({params}) =>
           fetch(
             `https://assignment-11-toy-server-tau.vercel.app/dolls/${params.id}`
           ),

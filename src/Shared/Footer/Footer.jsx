@@ -12,26 +12,24 @@ import logo from "../../assets/logo/logo.jpeg";
 const Footer = () => {
   return (
     <div style={{backgroundColor: "#ff77bc"}}>
-      <div className="footer-header grid grid-cols-2 lg:grid-cols-5 gap-8 text-gray-50 mb-5 mt-10 pt-6">
+      <div className="footer-header grid grid-cols-2 lg:grid-cols-5 gap-8 text-gray-50 pt-6">
         <div>
           <h2 className="font-bold text-5xl text-[#eae7eb]">Kid Castle</h2>
           <img className="w-12 rounded-full" src={logo} alt="" />
-          <br />
-          <div className="list-none ps-6 space-y-8 grid">
+          <div className="list-none ps-6 space-y-4 grid grid-cols-2">
             <li>
-              <FaFacebookF className="text-sky-500 text-5xl"></FaFacebookF>
+              <FaFacebookF className="text-sky-500 text-5xl hover:animate-bounce transition-[.o3ms]"></FaFacebookF>
             </li>
             <li>
-              <FaFacebookMessenger className="text-violet-500 text-5xl"></FaFacebookMessenger>
+              <FaFacebookMessenger className="text-violet-500 text-5xl hover:animate-bounce"></FaFacebookMessenger>
             </li>
             <li>
-              <FcGoogle className="text-5xl"></FcGoogle>
+              <FcGoogle className="text-5xl hover:animate-bounce"></FcGoogle>
             </li>
             <li>
-              <FaTwitter className="text-blue-400 text-5xl"></FaTwitter>
+              <FaTwitter className="text-blue-400 text-5xl hover:animate-bounce"></FaTwitter>
             </li>
           </div>
-          <br />
           <div className="flex items-center gap-2 w-30 h-10">
             <img src="/public/assets/Icons/Group 9969.png" alt="" />
           </div>
@@ -39,52 +37,36 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold text-3xl">Shop</h4>
           <br />
-          <br />
           <div className="font-normal text-xl text-[#fffaf0] ">
             <p>For Baby</p>
-            <br />
             <p>1 to 2 years</p>
-            <br />
             <p>2 to 4 years</p>
-            <br />
             <p>5 to 7 years</p>
-            <br />
             <p>12 years & Up</p>
           </div>
         </div>
         <div>
           <h4 className="font-semibold text-3xl">Brand</h4>
           <br />
-          <br />
           <div className="font-normal text-xl text-[#fffaf0]">
             <p>Our Story</p>
-            <br />
             <p>Blog</p>
-            <br />
             <p>In the Press</p>
-            <br />
             <p>Location</p>
-            <br />
           </div>
         </div>
         <div>
           <h4 className="font-semibold text-3xl">Support</h4>
           <br />
-          <br />
           <div className="font-normal text-xl text-[#fffaf0]">
             <p>Return Policy</p>
-            <br />
             <p>Sales</p>
-            <br />
             <p>Refund Policy</p>
-            <br />
             <p>Contact</p>
-            <br />
           </div>
         </div>
         <div>
           <h4 className="font-semibold  text-3xl">Contact Us</h4>
-          <br />
           <br />
           <div className="font-normal text-xl text-[#fffaf0] ">
             <p>
@@ -106,7 +88,7 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <div className=" text-center mt-12 mb-32 mx-auto">
+      <div className=" text-center mt-12 mb-8 mx-auto">
         <div className="">
           <p className="font-normal text-xl text-[#fffaf0] pb-8">
             <span className="inline-flex text-2xl">

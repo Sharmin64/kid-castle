@@ -6,7 +6,7 @@
   font-family: "Raleway", Arial, sans-serif;
   background: #7f9ead;
 }*/
-
+/*
 .card {
   position: relative;
   width: 300px;
@@ -21,7 +21,7 @@
 }
 
 .card:hover {
-  height: 320px;
+  height: 420px;
 }
 
 .imgbox {
@@ -46,11 +46,11 @@ img {
   transition: 0.3s;
 }
 
-.card:hover>.content {
+.card-box:hover>.content {
   opacity: 1;
   transform: translateY(-180px);
 }
 
 .content h2 {
   color: #7f9ead;
-}
+}*/
